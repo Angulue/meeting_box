@@ -2,7 +2,7 @@
 kind of skype in a phonebox , with blurred video of your interlocutor, old phone and a timer to mesure your conversation.
 
 ## Hardware
-+ makey makey 
++ makey makey
 + a driing_sound.mp3
 + a Webcam with USB cable
 + a screen sand a server, or simply, a computer
@@ -12,6 +12,7 @@ kind of skype in a phonebox , with blurred video of your interlocutor, old phone
 + your computer prompt
 + any text editor, personnally I used sublimtext
 + download node.js
++ socket.io
 
 ## the experience ?
 During Interaction 18, you could probably
@@ -49,4 +50,23 @@ and your interlocutor’s one too.
 you both decide to meet each other
 for real.
 
-## How 
+## How to make the image blur become clearer and clearer as time goes by ?
+
+1.You have to mesure time with your html thanks to the jquery function **setInterval()**.
+
+The setInterval() method calls a function or evaluates an expression at specified intervals (in milliseconds).
+The setInterval() method will continue calling the function until clearInterval() is called, or the window is closed.
+The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+
+```javascript
+setInterval(function(){; }, 1000);
+
+```
+ok now you have to create variable in order to say to your computer "every second, the img become clearer of __ px".
+
+```
+   interval = setInterval(function(){ 
+                blur -=0.15;
+
+
+
