@@ -62,11 +62,15 @@ The ID value returned by setInterval() is used as the parameter for the clearInt
 setInterval(function(){; }, 1000);
 
 ```
-ok now you have to create variable in order to say to your computer "every second, the img become clearer of __ px".
+ok now you have to create a variable in order to say to your computer "every 100 milliseconds, the img become clearer of 0.15 px".
 
 ```
+var interval;
    interval = setInterval(function(){ 
                 blur -=0.15;
+                }, 100)
+```
+
 
 
 
